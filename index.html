@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SM Capas - Fechamento de Caixa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏪 SM Capas - Fechamento de Caixa</h1>
+        </header>
+
+        <main>
+            <!-- Formulário de entrada JSON -->
+            <section class="json-input-section">
+                <h2>📋 Novo Fechamento</h2>
+                <p>Cole aqui o JSON gerado pelo Claude:</p>
+                
+                <form name="fechamento" netlify netlify-honeypot="bot-field" hidden>
+                    <input type="hidden" name="form-name" value="fechamento" />
+                    <input type="text" name="data" />
+                    <input type="text" name="total_liquido" />
+                    <input type="text" name="dinheiro" />
+                    <input type="text" name="cartao_bruto" />
+                    <input type="text" name="cartao_liquido" />
+                    <input type="text" name="pix" />
+                    <input type="text" name="aparelhos" />
+                    <input type="text" name="assistencia" />
+                    <input type="text" name="custo" />
+                    <input type="text" name="lucro" />
+                    <input type="text" name="compras" />
+                    <input type="text" name="gastos" />
+                    <input type="text" name="devolucao" />
+                </form>
+
+                <textarea id="jsonInput" placeholder='{"data": "23/04/2025", "total_liquido": 1500.00, ...}'></textarea>
+                
+                <button id="processBtn" class="btn-primary">💾 Processar e Salvar</button>
+                
+                <div id="preview" class="preview hidden"></div>
+            </section>
+
+            <!-- Listagem de fechamentos -->
+            <section class="list-section">
+                <h2>📊 Fechamentos Salvos</h2>
+                <div id="fechamentosList">
+                    <p class="empty-state">Nenhum fechamento salvo ainda. Processe o primeiro!</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
