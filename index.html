@@ -18,7 +18,8 @@
                 <h2>📋 Novo Fechamento</h2>
                 <p>Cole aqui o JSON gerado pelo Claude:</p>
                 
-                <form name="fechamento" netlify netlify-honeypot="bot-field" hidden>
+                <form name="fechamento" netlify netlify-honeypot="bot-field">
+                    <p class="hidden">
                     <input type="hidden" name="form-name" value="fechamento" />
                     <input type="text" name="data" />
                     <input type="text" name="total_liquido" />
@@ -33,6 +34,7 @@
                     <input type="text" name="compras" />
                     <input type="text" name="gastos" />
                     <input type="text" name="devolucao" />
+                        </p>
                 </form>
 
                 <textarea id="jsonInput" placeholder='{"data": "23/04/2025", "total_liquido": 1500.00, ...}'></textarea>
